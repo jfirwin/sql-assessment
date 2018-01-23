@@ -12,13 +12,7 @@ app.use(cors());
 
 // You need to complete the information below to connect
 // to the assessbox database on your postgres server.
-massive({
-  host: //host,
-  port: //port,
-  database: //database,
-  user: //user,
-  password: //password
-}).then( db => {
+massive(/*ADD YOUR DB CREDENTIALS*/).then( db => {
   app.set('db', db);
 
   // Initialize user table and vehicle table.
@@ -33,7 +27,7 @@ massive({
 
 
 // ===== Build enpoints below ============
-
+app.use(`/api`, mainCtrl(app))
 
 
 
