@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS vehicles (
   id SERIAL PRIMARY KEY,
   make VARCHAR(200),
   model VARCHAR(200),
-  year NUMERIC,
+  year INTEGER,
   owner_id INTEGER REFERENCES users(id)
 );
 
